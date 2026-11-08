@@ -1,4 +1,3 @@
-// @vitest-environment node
 import { readFileSync } from "node:fs";
 import { describe, expect, it, vi } from "vitest";
 
@@ -21,8 +20,8 @@ describe("GitHub Pages deployment", () => {
 
   it("exports the static shell as dist/index.html without a server artifact", () => {
     expect(options.nitro).toBe(false);
-    expect(options.vite.environments.client?.build.outDir).toBe("dist");
-    expect(options.vite.environments.ssr?.build.outDir).toBe(".output/server");
+    expect(options.vite.environments["client"]?.build.outDir).toBe("dist");
+    expect(options.vite.environments["ssr"]?.build.outDir).toBe(".output/server");
     expect(options.tanstackStart.spa.enabled).toBe(true);
     expect(options.tanstackStart.spa.maskPath).toBe("/");
     expect(options.tanstackStart.spa.prerender.outputPath + ".html").toBe("/index.html");
