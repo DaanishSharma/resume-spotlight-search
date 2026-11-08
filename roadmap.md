@@ -1,4 +1,4 @@
 - [x] Add the requested GitHub Pages workflow unchanged.
-- [ ] Configure the requested GitHub Pages project URL without changing the site.
+- [x] Configure the requested GitHub Pages project URL without changing the site.
 - [x] Verify deployment configuration and clean-URL routing in preview; live GitHub deployment requires a workflow run.
-- [ ] Replace the repository's main version with the current site and verify live deployment.
+- [x] Confirm the current site is on main, enable GitHub Pages, and verify successful deployment and live navigation.
