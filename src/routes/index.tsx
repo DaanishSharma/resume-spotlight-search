@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
           jobTitle: "Solutions Engineer (Applied AI Engineering)",
           worksFor: { "@type": "Organization", name: "TELUS Digital AI" },
           email: "mailto:daanish1sharma@gmail.com",
-          address: { "@type": "PostalAddress", addressLocality: "Patiala", addressCountry: "IN" },
+          address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressCountry: "IN" },
           alumniOf: "Thapar Institute",
           sameAs: ["https://github.com/daanishsharma", "https://linkedin.com/in/daanish-sharma-a7a828196"],
         }),

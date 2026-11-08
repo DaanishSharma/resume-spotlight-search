@@ -33,7 +33,7 @@ export function ContactFooter() {
           <Github className="h-4 w-4" /> github.com/daanishsharma
         </a>
         <span className="flex items-center gap-3 text-muted-foreground">
-          <MapPin className="h-4 w-4" /> Patiala, India
+          <MapPin className="h-4 w-4" /> Bengaluru, India
         </span>
       </div>
     </footer>
