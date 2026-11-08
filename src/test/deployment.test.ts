@@ -28,7 +28,7 @@ describe("GitHub Pages deployment", () => {
   });
 
   it("copies the shell to the clean-URL fallback after building and uploads dist", () => {
-    const workflow = readFileSync(new URL("../../.github/workflows/deploy.yml", import.meta.url), "utf8");
+    const workflow = readFileSync(".github/workflows/deploy.yml", "utf8");
     expect(workflow).toContain("      - run: npm run build\n      - run: cp dist/index.html dist/404.html\n      - uses: actions/upload-pages-artifact@v3\n        with:\n          path: dist\n");
     expect(workflow).toContain("          node-version: 20\n");
     expect(workflow).toContain("    branches: [main]\n");
