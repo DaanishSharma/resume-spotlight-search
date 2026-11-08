@@ -32,3 +32,4 @@ use the editor.
 ## Deployment
 - Keep TanStack Router and export its SPA shell to `dist/index.html`; derive routing and public asset paths from Vite's root base for user-site GitHub Pages hosting and preview. GitHub Pages uses the identical `dist/404.html` shell for clean-URL deep links.
 - Disable the server deployment adapter and keep the build-time SSR bundle outside `dist`, because GitHub Pages must receive only static client files.
+- Serve the compiled resume PDF from public assets with Vite-base-aware links so downloads work on static external hosting without a Lovable asset proxy.
