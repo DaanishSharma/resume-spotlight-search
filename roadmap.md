@@ -4,3 +4,4 @@
 - [x] Confirm the current site is on main, enable GitHub Pages, and verify successful deployment and live navigation.
 - [ ] Replace the old user-site main branch with the current portfolio and root-domain deployment configuration.
 - [ ] Deploy and verify https://daanishsharma.github.io/ and clean-URL navigation.
+- [ ] Add the uploaded resume as a downloadable document before deploying.
