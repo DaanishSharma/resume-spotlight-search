@@ -35,11 +35,11 @@ export function parseFrontmatter(src: string): { data: Record<string, unknown>; 
   const m = src.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!m) return { data: {}, content: src };
   const data: Record<string, unknown> = {};
-  for (const line of m[1].split(/\r?\n/)) {
+  for (const line of (m[1] ?? "").split(/\r?\n/)) {
     const i = line.indexOf(":");
     if (i > 0) data[line.slice(0, i).trim()] = parseValue(line.slice(i + 1));
   }
-  return { data, content: m[2] };
+  return { data, content: m[2] ?? "" };
 }
 
 function toPost(file: string, raw: string): Post {
