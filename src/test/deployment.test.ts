@@ -15,8 +15,8 @@ const options = config as unknown as {
 };
 
 describe("GitHub Pages deployment", () => {
-  it("uses the requested repository prefix for asset URLs", () => {
-    expect(options.vite.base).toBe("/resume-spotlight-search/");
+  it("uses the requested root domain for asset URLs", () => {
+    expect(options.vite.base).toBe("/");
   });
 
   it("exports the static shell as dist/index.html without a server artifact", () => {
@@ -24,7 +24,7 @@ describe("GitHub Pages deployment", () => {
     expect(options.vite.environments["client"]?.build.outDir).toBe("dist");
     expect(options.vite.environments["ssr"]?.build.outDir).toBe(".output/server");
     expect(options.tanstackStart.spa.enabled).toBe(true);
-    expect(options.tanstackStart.spa.maskPath).toBe("/resume-spotlight-search/");
+    expect(options.tanstackStart.spa.maskPath).toBe("/");
     expect(options.tanstackStart.spa.prerender.outputPath + ".html").toBe("/index.html");
   });
 

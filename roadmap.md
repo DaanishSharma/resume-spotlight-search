@@ -2,3 +2,5 @@
 - [x] Configure the requested GitHub Pages project URL without changing the site.
 - [x] Verify deployment configuration and clean-URL routing in preview; live GitHub deployment requires a workflow run.
 - [x] Confirm the current site is on main, enable GitHub Pages, and verify successful deployment and live navigation.
+- [ ] Replace the old user-site main branch with the current portfolio and root-domain deployment configuration.
+- [ ] Deploy and verify https://daanishsharma.github.io/ and clean-URL navigation.
