@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Deployment
+- Keep TanStack Router and export its SPA shell to `dist/index.html` with root-prefixed assets; GitHub Pages uses the identical `dist/404.html` shell for clean-URL deep links.
+- Disable the server deployment adapter and keep the build-time SSR bundle outside `dist`, because GitHub Pages must receive only static client files.
