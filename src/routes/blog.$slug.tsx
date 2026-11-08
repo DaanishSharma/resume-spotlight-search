@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
+import { mediaComponents } from "@/components/PostMedia";
 import { SiteHeader } from "@/components/SiteHeader";
 import { usePosts } from "@/hooks/use-posts";
 import { formatDate } from "@/lib/posts";
@@ -13,9 +14,15 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => ({
     meta: [
       { title: `${params.slug.replace(/-/g, " ")} · Daanish Sharma` },
-      { name: "description", content: "A post by Daanish Sharma on applied AI and data infrastructure." },
+      {
+        name: "description",
+        content: "A post by Daanish Sharma on applied AI and data infrastructure.",
+      },
       { property: "og:title", content: `${params.slug.replace(/-/g, " ")} · Daanish Sharma` },
-      { property: "og:description", content: "A post by Daanish Sharma on applied AI and data infrastructure." },
+      {
+        property: "og:description",
+        content: "A post by Daanish Sharma on applied AI and data infrastructure.",
+      },
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -67,7 +74,11 @@ function PostPage() {
               {formatDate(post.date)} · {post.readMinutes} min read
             </p>
             <div className="prose-site mt-10">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]} components={{ pre: Pre }}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeHighlight]}
+                components={{ ...mediaComponents, pre: Pre }}
+              >
                 {post.content}
               </ReactMarkdown>
             </div>
