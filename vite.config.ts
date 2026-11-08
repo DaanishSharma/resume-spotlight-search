@@ -10,9 +10,24 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // GitHub Pages serves only the client files; no server deployment adapter is needed.
+  nitro: false,
+  vite: {
+    base: "/",
+    environments: {
+      client: { build: { outDir: "dist" } },
+      ssr: { build: { outDir: ".output/server" } },
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // TanStack adds .html to the shell output path. The workflow copies it to 404.html.
+    spa: {
+      enabled: true,
+      maskPath: "/",
+      prerender: { outputPath: "/index", crawlLinks: false },
+    },
   },
 });
