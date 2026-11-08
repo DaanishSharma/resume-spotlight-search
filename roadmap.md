@@ -1,3 +1,4 @@
 - [x] Add the requested GitHub Pages workflow unchanged.
-- [x] Configure a static root-domain build with absolute asset URLs.
+- [ ] Configure the requested GitHub Pages project URL without changing the site.
 - [x] Verify deployment configuration and clean-URL routing in preview; live GitHub deployment requires a workflow run.
+- [ ] Replace the repository's main version with the current site and verify live deployment.
