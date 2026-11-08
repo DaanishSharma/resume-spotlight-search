@@ -13,7 +13,7 @@ export default defineConfig({
   // GitHub Pages serves only the client files; no server deployment adapter is needed.
   nitro: false,
   vite: {
-    base: process.env['GITHUB_ACTIONS'] === "true" ? "/resume-spotlight-search/" : "/",
+    base: "/",
     environments: {
       client: { build: { outDir: "dist" } },
       ssr: { build: { outDir: ".output/server" } },
@@ -26,7 +26,7 @@ export default defineConfig({
     // TanStack adds .html to the shell output path. The workflow copies it to 404.html.
     spa: {
       enabled: true,
-      maskPath: process.env['GITHUB_ACTIONS'] === "true" ? "/resume-spotlight-search/" : "/",
+      maskPath: "/",
       prerender: { outputPath: "/index", crawlLinks: false },
     },
   },

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Github } from "lucide-react";
+import { Download, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ContactFooter } from "@/components/ContactFooter";
 import { usePosts } from "@/hooks/use-posts";
@@ -107,6 +108,11 @@ function Index() {
             conversational audio, and the infrastructure around both. Previously I built production data pipelines on
             Azure Databricks at Tredence.
           </p>
+          <Button asChild variant="outline" size="sm" className="mt-6">
+            <a href={`${import.meta.env.BASE_URL}daanish-sharma-resume.pdf`} download>
+              <Download /> Download resume
+            </a>
+          </Button>
         </section>
 
         <section className="py-10">
