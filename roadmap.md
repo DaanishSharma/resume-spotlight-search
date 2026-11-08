@@ -1,0 +1,3 @@
+- [x] Add the requested GitHub Pages workflow unchanged.
+- [ ] Configure a static root-domain build with absolute asset URLs.
+- [ ] Verify deployment configuration and clean-URL routing.
