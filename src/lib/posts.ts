@@ -48,10 +48,10 @@ function toPost(file: string, raw: string): Post {
   return {
     file,
     slug: slugFromFile(file),
-    title: String(data.title ?? slugFromFile(file)),
-    date: String(data.date ?? file.slice(0, 10)),
-    excerpt: String(data.excerpt ?? ""),
-    tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
+    title: String(data["title"] ?? slugFromFile(file)),
+    date: String(data["date"] ?? file.slice(0, 10)),
+    excerpt: String(data["excerpt"] ?? ""),
+    tags: Array.isArray(data["tags"]) ? (data["tags"] as string[]) : [],
     content,
     readMinutes: Math.max(1, Math.round(words / 220)),
   };

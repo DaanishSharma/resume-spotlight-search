@@ -9,8 +9,8 @@ describe("posts", () => {
     const { data, content } = parseFrontmatter(
       '---\ntitle: "Hello world"\ndate: "2026-11-08"\ntags: ["meta"]\n---\nBody',
     );
-    expect(data.title).toBe("Hello world");
-    expect(data.tags).toEqual(["meta"]);
+    expect(data["title"]).toBe("Hello world");
+    expect(data["tags"]).toEqual(["meta"]);
     expect(content).toBe("Body");
   });
 });
